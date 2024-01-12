@@ -1,0 +1,7 @@
+console.log("In This Programme I Am Going To Demonstrate Sibilings And Parents In JavaScript.")
+console.log("Firstly I Am Printing Previous Sibiling Of The Body Node.")
+console.log(document.documentElement.childNodes[2].previousSibling)
+console.log("Then I Am Printing Parent Of The Div Node.")
+console.log(document.documentElement.childNodes[2].firstChild.parentNode)
+console.log("Lastly I Am Printing Next Sibiling Of The Div Node.")
+console.log(document.documentElement.childNodes[2].firstChild.nextSibling)

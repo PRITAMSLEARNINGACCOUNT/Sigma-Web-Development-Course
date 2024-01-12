@@ -1,0 +1,94 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Margin: 2vw;
+    --Border: 2px solid black;
+    --Width: 28.5vw;
+    --Height: 22vh;
+}
+
+
+.Box_1 {
+    border: var(--Border);
+    margin: var(--Margin);
+    width: var(--Width);
+    height: var(--Height);
+    display: inline-block;
+}
+
+.Box_2 {
+    border: var(--Border);
+    margin: var(--Margin);
+    width: var(--Width);
+    height: var(--Height);
+    display: inline-block;
+}
+
+.Box_3 {
+    border: var(--Border);
+    margin: var(--Margin);
+    width: var(--Width);
+    height: var(--Height);
+    display: inline-block;
+}
+@media only screen and (min-width:800px) {
+    .Box_1 {
+        border: var(--Border);
+        margin: var(--Margin);
+        width: var(--Width);
+        height: var(--Height);
+        display: block;
+        display: inline-block;
+    }
+    
+    .Box_2 {
+        border: var(--Border);
+        margin: var(--Margin);
+        width: var(--Width);
+        height: var(--Height);
+        display: block;
+        display: inline-block;
+    }
+    
+    .Box_3 {
+        border: var(--Border);
+        margin: var(--Margin);
+        width: var(--Width);
+        height: var(--Height);
+        display: block;
+        display: inline-block;
+    }
+ 
+}
+@media screen and (orientation:portrait) {
+    .Box_1 {
+        border: var(--Border);
+        margin: var(--Margin);
+        width: var(--Width);
+        height: var(--Height);
+        display: block;
+        /* display: inline-block; */
+    }
+    
+    .Box_2 {
+        border: var(--Border);
+        margin: var(--Margin);
+        width: var(--Width);
+        height: var(--Height);
+        display: block;
+        /* display: inline-block; */
+    }
+    
+    .Box_3 {
+        border: var(--Border);
+        margin: var(--Margin);
+        width: var(--Width);
+        height: var(--Height);
+        display: block;
+        /* display: inline-block; */
+    }
+ 
+}

@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: inline-block;
+}
+ul {
+
+    position: relative;
+    left: 55vw;
+    bottom: 0.5vw;
+
+}
+
+ul li {
+    padding-left: 1vw;
+    padding-bottom: 0;
+    display: inline-block;
+}
+
+#NavigationBar {
+    display: inline-block;
+    position: sticky;
+    top: 0px;
+}
+
+#OtherItems {
+    display: inline-block;
+}
+
+#Heading {
+    display: inline-block;
+    color: red;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: xx-large;
+}
+
+.Background {
+    height: 93vh;
+}
+
+.Product{
+    
+    display: inline-block;
+    width: 12vw;
+    height: 40vh;
+    margin: 2vw;
+}
+
+.Picture {
+    margin: 0;
+    width: 12vw;
+    height: 20vh;
+}
+
+.Name {
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    color: red;
+}
+
+.Price {
+    font-weight: bolder;
+    font-size: xx-large;
+    padding: 2vh;
+    text-align: center;
+    color: red;
+}
+.Buttom{
+    display: inline-block;
+    font-weight: bolder;
+    font-size: x-large;
+    border: 2px solid pink;
+    border-radius: 5vw;
+    text-align: center;
+}
+.Buttom_2{
+    display: inline-block;
+    font-weight: bolder;
+    font-size: x-large;
+    border: 2px solid pink;
+    border-radius: 5vw;
+    text-align: center;
+}

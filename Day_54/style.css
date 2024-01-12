@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.Container{
+    border: 2px solid black;
+    height: 50vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    border: 2px solid black;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

@@ -1,0 +1,35 @@
+.Container{
+    display: flow-root;
+    border: 8px solid green;
+}
+.First_Div {
+    background-color: aqua;
+    color: brown;
+    border: 2px solid red;
+    float: right;
+}
+.Second_Div {
+    clear: right;
+    padding: 2px;
+    background-color: green;
+    color: yellow;
+    border: 2px solid blue;
+}
+
+#ThirdImage{
+    float: right;
+}
+.Third_Div {
+    clear: left;
+    background-color: purple;
+    color: peru;
+    border: 2px solid red;
+}
+
+.Fourth_Div {
+    clear: both;
+    background-color: red;
+    color: yellowgreen;
+    border: 2px solid black;
+
+}

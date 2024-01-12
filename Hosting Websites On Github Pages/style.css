@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI';
+}
+
+.Container_1 {
+    display: grid;
+    border: none;
+    height: 99.5vh;
+    width: 99.8vw;
+    border: none;
+    height: 99.5vh;
+    width: 99.8vw;
+    grid-template-columns: 17vw 17vw 17vw;
+    grid-template-rows: 18vh 18vh 18vh 18vh;
+    justify-content: center;
+    align-content: center;
+    gap: 25px;
+}
+
+.box {
+    background-color: whitesmoke;
+    text-align: center;
+    height: 18vh;
+    width: 17vw;
+    /* border: 2px solid blue; */
+}
+
+#First_Box {
+    height: 8vh;
+    font-size: x-large;
+    /* border: 2px solid black; */
+    display: block;
+    padding-top: 1vw;
+
+}
+
+.Container_1 a {
+    text-decoration: none;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+button {
+    font-weight: 900;
+    margin: 2px;
+    font-weight: bold;
+    color: white;
+    border-radius: 6.5px;
+    border: none;
+    height: 4vh;
+    width: 7vw;
+
+}
+
+.button {
+    /* border: 2px solid blueviolet; */
+    /* width: ; */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.button_1 {
+    background-color: #00b6d1;
+}
+
+.button_2 {
+
+    background-color: #81c780;
+}
+
+.Heading {
+    height: 8vh;
+    font-size: x-large;
+    /* border: 2px solid black; */
+    display: block;
+    padding-top: 1vw;
+}
+
+p {
+    font-size: medium;
+}
+
+.logo {
+    background-color: blue;
+    width: 6vw;
+    height: 10vh;
+}
+
+#Footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#Logo {
+    padding: 20px;
+    height: 6vh;
+    width: 9vw;
+}
+
+.Logo {
+    height: 10vh;
+    width: 5vw;
+    list-style: none;
+}
+
+.Listing ul {
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    font-family: 'Segoe UI';
+}
+
+.Listing ul li {
+    list-style: none;
+
+}
+
+.Listing ul li img {
+    height: 1.3vh;
+}
+
+#Icon {
+    width: 1vw;
+    height: 2vh;
+}
+
+.Description {
+    display: flex;
+    justify-content: center;
+    height: 20vh;
+    /* border: 2px solid brown */
+}
+
+/* #Temp {
+    display: inline;
+    font-weight: bold;
+
+} */
+
+#Description {
+    /* font-family: 'Segoe UI'; */
+    padding-top: 10vh;
+    /* padding-bottom: 10vh; */
+    font-weight: 400;
+    font-size: 50px;
+}
+
+#Para {
+    text-align: center;
+    /* display: flex;
+    justify-content: center; */
+    height: 8vh;
+    /* padding-top: 2.5vh; */
+    font-size: x-large;
+    /* border: 2px solid black; */
+    font-weight: 100;
+}
+
+.First_Button {
+    display: flex;
+    justify-content: center;
+    height: 15vh;
+    /* border: 2px solid black; */
+}
+
+#First_Button {
+    background-color: #00b6d1;
+    width: 25vw;
+    font-weight: bold;
+    color: white;
+}
+
+#First_Button a {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.Image {
+    display: flex;
+    /* border: 2px solid black; */
+    padding-left: 23vw;
+    /* padding-top: 15px; */
+    /* padding-bottom: 15px; */
+}
+
+#Second_Image {
+    height: 6vh;
+    width: 3vw;
+}
+
+#Something {
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: 200;
+}
+
+.Container_2 {
+    background-color: hsla(0, 0%, 0%, 0.796);
+    padding-top: 10vh;
+    height: 75vh;
+}
+
+.Wrapper {
+    display: flex;
+    /* border: 2px solid brown; */
+    height: 50%;
+    /* width: 50%; */
+    justify-content: center;
+    gap: 75px;
+}
+
+.Wrapper_2 {
+    /* border: 2px solid black; */
+    height: 50%;
+    font-size: x-large;
+    /* width: ; */
+    /* padding-top: 5vh;
+    padding-left: 22vw; */
+    color: white;
+    /* text-align: left; */
+    display: flex;
+    justify-content: center;
+
+}
+
+.Sub_Wrapper {
+
+    /* border: 2px solid black; */
+    width: 50%;
+    height: 98%;
+    /* display: flex; */
+
+}
+
+.Sub_Wrapper a {
+    cursor: pointer;
+    text-decoration: none;
+    color: azure;
+}
+
+.Wrapper_2 p {
+    padding-top: 15px;
+}
+
+.Wrapper_2 h3 {
+    padding-top: 15px;
+}
+
+.Box_2 {
+    /* border: 2px solid red; */
+    height: 35vh;
+    width: 20vw;
+    border-radius: 1.5vw;
+}
+
+#S2nd_Box {
+    background-color: white;
+}
+
+#S2nd_Box h3 {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    color: #00b6d1;
+    font-size: 24px;
+}
+
+#F1st_Box {
+    color: white;
+}
+
+
+.tnp-email {
+    /* padding-top: 20px; */
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+}
+
+.tnp-email input {
+    width: 15vw;
+}
+
+.email {
+    display: flex;
+    justify-content: center;
+}
+
+#Second2ndBox {
+    width: 15vw;
+    background-color: #00b6d1;
+}
+
+.SignUp {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#F1st_Box h3 {
+    font-size: x-large;
+    padding-top: 5vw;
+    text-align: center;
+
+}
+
+#F1st_Box p {
+    font-size: 15px;
+    padding-top: 1vw;
+    text-align: center;
+    font-weight: 400;
+
+}
+
+.Container_3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 100%;
+    /* border: 2px solid blue; */
+    background-color: aliceblue;
+    gap: 5px;
+}
+
+.boxes {
+    text-align: left;
+    height: 40%;
+    width: 15vw;
+    /* border: 2px solid black; */
+}
+
+.boxes nav {
+    padding-top: 10px;
+    /* text-align: left; */
+    /* list-style: none;
+    list-style-type: none; */
+}
+
+.boxes nav ul {
+    /* text-align: left; */
+    /* list-style: none; */
+    list-style-type: none;
+}
+
+.boxes nav ul li {
+    padding: 2px;
+    /* border: 2px solid black; */
+    width: 100%;
+    /* text-align: left; */
+    /* list-style: none;  */
+    /* list-style-type: none; */
+}
+
+.boxes p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.boxes textarea {
+    padding-top: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.boxes button {
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00b6d1;
+    width: 11.5vw;
+    /* padding-top: 10px; */
+}
+
+/* #Last_B */
+footer {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20vh;
+    width: 100%;
+}
+
+.First_Image img {
+    width: 10vw;
+}
+
+/* .First_Image .Text{
+    width: 2px;
+
+} */

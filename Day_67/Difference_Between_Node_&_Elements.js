@@ -1,0 +1,6 @@
+console.log("So This Is The First Child Of The Body Which Is A Node.")
+console.log(document.documentElement.childNodes[2].firstChild)
+console.log("And This Is A First Element Child Instead Of A Node.")
+console.log(document.documentElement.childNodes[2].firstElementChild)
+console.log("And You Can Easily Differenciate Between The Node And The Element.")
+console.log("A Node Contains Blank Spaces,Comments As Well While An Element Only Find For An Element.")

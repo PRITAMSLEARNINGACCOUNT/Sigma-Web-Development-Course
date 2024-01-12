@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+#FontSize {
+    font-size: 50px;
+}
+
+#FontFamily {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#align {
+    text-align: center;
+}
+
+#ImportingFonts {
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+#Weight {
+    font-weight: bolder;
+}
+
+#FontStyle {
+    font-style: italic;
+}
+
+#TextDecoration {
+    text-decoration: underline;
+}
+
+#TextDecorationType {
+    text-decoration: underline wavy;
+}
+
+#TextDecorationColor {
+    text-decoration: underline wavy;
+    text-decoration-color: chartreuse;
+}
+
+#TextDecorationThickness {
+    text-decoration: underline wavy;
+    text-decoration-thickness: 2px;
+}
+
+#TextIndent {
+    text-indent: 20px;
+}
+
+#TextTransform {
+    text-transform: capitalize;
+
+}
+
+
+#TextOverflow {
+    border: 5px solid black;
+    width: 50px;
+    overflow: hidden;
+    text-overflow: clip;
+    text-transform: capitalize;
+
+}

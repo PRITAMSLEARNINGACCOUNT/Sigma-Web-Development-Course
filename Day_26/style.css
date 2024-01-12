@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#Header {
+    text-align: center;
+    font-weight: bolder;
+    border: 2px solid yellow;
+    outline: 2px solid yellowgreen;
+    border-radius: 2vw;
+    width: 13vw;
+    margin:auto 20vw auto 45vw;
+}
+
+.FirstDivision {
+    width: 42.5vw;
+    height: 30vh;
+    box-sizing: border-box;
+    margin: 2vw auto;
+}
+
+.Overflow {
+    width: 10vw;
+    height: 10vw;
+    border: 2px solid black;
+    box-sizing: border-box;
+    margin-bottom: 3vw;
+    overflow: scroll;
+    display: inline-block;
+}
+
+.Overflow_2 {
+    width: 17vw;
+    height: 10vw;
+    border: 2px solid black;
+    box-sizing: border-box;
+    margin-left: 15vw;
+    margin-bottom: 3vw;
+    overflow: auto;
+    display: inline-block;
+}
+
+.SecondDivision {
+    width: 42.5vw;
+    height: 30vh;
+    box-sizing: border-box;
+    margin: 2vw auto;
+
+}
+
+.Overflow_ShortHand {
+    width: 10vw;
+    height: 10vw;
+    border: 2px solid black;
+    box-sizing: border-box;
+    margin-bottom: 5vw;
+    overflow: auto hidden;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.Overflow_X_Y {
+    width: 10vw;
+    height: 12vw;
+    border: 2px solid black;
+    box-sizing: border-box;
+    margin-left: 22vw;
+    margin-bottom: 3vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: inline-block;
+}
+
+.Overflow_Ellipsis {
+    width: 10vw;
+    height: 10vw;
+    border: 2px solid black;
+    box-sizing: border-box;
+    margin: -5vw 20vw -5vw 45vw;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#Footer {
+
+    width: 13vw;
+    box-sizing: border-box;
+    margin:9.7vw 20vw auto 45vw;
+    border: 2px solid pink;
+    outline: 2px solid red;
+    border-radius: 2vw;
+}

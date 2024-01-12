@@ -1,0 +1,54 @@
+:root {
+    --color: purple;
+    --BackgroundColor: green;
+    --Padding: 2vw;
+    --Margin: 2vw auto;
+    /* --border_Colour: Black; */
+    --Width: 20vw;
+    --Height: 20vh;
+    --Border: 2px solid black;
+}
+
+.FirstDiv {
+    background-color: var(--BackgroundColor);
+    border: var(--Border);
+    width: var(--Width);
+    height: var(--Height);
+}
+
+.SecondDiv {
+    background-color: var(--BackgroundColor);
+    border: var(--Border);
+    width: var(--Width);
+    height: var(--Height);
+}
+
+.ThirdDiv {
+    color: var(--color);
+    margin: var(--Margin);
+    padding: var(--Padding);
+    border: var(--Border);
+    width: var(--Width);
+    height: var(--Height);
+
+}
+
+.FourthDiv {
+    color: var(--color);
+    margin: var(--Margin);
+    padding: var(--Padding);
+    border: var(--Border);
+    width: var(--Width);
+    height: var(--Height);
+
+}
+
+.LocalVarriable {
+    --color: blue;
+    color: var(--color);
+    margin: var(--Margin);
+    padding: var(--Padding);
+    border: var(--Border);
+    width: var(--Width);
+    height: var(--Height);
+}

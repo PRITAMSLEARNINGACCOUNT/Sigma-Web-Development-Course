@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    background-color: blue;
+    width: 6vw;
+    height: 10vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#Logo {
+    padding: 20px;
+    height: 6vh;
+    width: 9vw;
+}
+
+.Logo {
+    height: 10vh;
+    width: 5vw;
+    list-style: none;
+}
+
+.Listing ul {
+    display: flex;
+    gap: 45px;
+    align-items: center;
+    font-family: 'Segoe UI';
+}
+
+.Listing ul li {
+    list-style: none;
+
+}
+.Listing ul li img{
+    height: 1.3vh;
+}
+
+#Icon {
+    width: 1vw;
+    height: 2vh;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms In HTML</title>
+</head>
+
+<body>
+    <h1>Student Form For Admission</h1>
+    <form action="/Submission.html" method="post">
+        <div>
+            <label for="Name_Field">Enter Your Name</label>
+        </div>
+        <div>
+            <input type="text" name="Person_Name" id="Name_Field" placeholder="Please Enter Your Name Here" autofocus>
+        </div>
+        <h4>Choose Your Gender</h4>
+        <div>
+            <label for="Gender">Male</label>
+            <input type="radio" name="Gender" id="Gender">
+            <label for="Gender_2">Female</label>
+            <input type="radio" name="Gender_2" id="Gender_2">
+        </div>
+
+        <div>
+            <label for="cheeckbox">Are You A PWD Candidate??</label>
+            <input type="checkbox" name="Cheeck_Box" id="cheeckbox">
+
+        </div>
+        <div>
+            <label for="Email">Enter Your Email Address Here</label>
+            <input type="email" name="Email_Address" id="Email">
+        </div>
+        <div>
+            <h5>It's Time To Know About You</h5>
+            <textarea name="About_Yourself" id="about_yourself" cols="30" rows="10">Write Down About Yourself</textarea>
+        </div>
+        <div>
+            <select name="Course_Selection" id="Choice" required>
+                <option value="BCA">Bachelors Of Computer Application</option>
+                <option value="BBA">Bachelors Of Buisness Administration</option>
+                <option value="MBA">Masters Of Buisness Administration</option>
+            </select>
+        </div>
+    </form>
+
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Container_1 {
+    height: 48vh;
+    width: 48vw;
+    border: 2px solid black;
+}
+
+.box_1 {
+
+    transition: all 5s ease-in-out 3s;
+    height: 50%;
+    width: 50%;
+    border: 2px solid black;
+}
+
+.Container_2 {
+    height: 48vh;
+    width: 48vw;
+    border: 2px solid black;
+
+}
+
+.box_2 {
+
+    transition-property: background-color, color;
+    transition-duration: 5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 3s;
+    height: 50%;
+    width: 50%;
+    border: 2px solid black;
+}
+
+.UniversalStyle {
+    color: blue;
+    background-color: aquamarine;
+}
+
+.UniversalStyle_2 {
+    transform: scaleX(1.5);
+    color: blue;
+    background-color: aquamarine;
+}

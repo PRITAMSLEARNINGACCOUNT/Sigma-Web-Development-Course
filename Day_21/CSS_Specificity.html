@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Specificity</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>This Is An Element</h1>
+    <div class="Example">
+        This Is A Statement Under A Division With A Class "Example"
+    </div>
+    <div id="SecondDiv">
+        This Is A Second Division Under A Division With An Id "SecondDiv"
+    </div>
+    <div class="Condition" data-X="Hello">
+        This Is A Third Division With A Class "Condition" Also With A Condition/Attribute "data-X="Hello""
+    </div>
+    <div style="color: aqua;" id="InlineStyle">
+        This Is A Division With An Id "InlineStyle"
+    </div>
+    <div style="color: aqua;" id="InlineStyle_2" class="Nothing">
+        This Is A Division Which Will Demonstrate "!important" Tag In CSS
+    </div>
+    <div id="LastDiv" class="LastDivision">
+        <p>Showing Some Hovering Effect Using Specificity In CSS</p>
+    </div>
+    <p class="Positioning">
+        Positioning Specificity
+    </p>
+</body>
+
+</html>

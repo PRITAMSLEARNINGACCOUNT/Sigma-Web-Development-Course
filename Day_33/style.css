@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Main_BackGround_Color: aqua;
+    --Hover_Color: blue;
+    --Element_Color: brown;
+    --List_Color: red;
+}
+
+.Navbar {
+    background-color: var(--Main_BackGround_Color);
+}
+
+.Navbar ul {
+    position: relative;
+    left: 69vw;
+}
+
+.Navbar ul:hover {
+    background-color: var(--List_Color);
+}
+
+.Navbar ul li:hover {
+    background-color: var(--Element_Color);
+}
+
+.Navbar:hover {
+    background-color: var(--Hover_Color);
+}
+
+.Navbar ul li {
+    padding: 0.5vw;
+    margin: 0.5vw;
+    display: inline-block;
+    list-style: none;
+}

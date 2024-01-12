@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .Animation {
+            width: 75vw;
+            height: 75vh;
+            border: 2px solid black;
+            background-color: aquamarine;
+        }
+
+        .box {
+            animation-name: Custom_Animation;
+            animation-duration: 3s;
+            animation-timing-function: ease-in;
+            animation-delay: 3s;
+            animation-iteration-count: 5;
+            height: 50%;
+            width: 50%;
+            border: 2px solid black;
+            animation-direction: alternate-reverse;
+            /* background-color: yellow; */
+            animation-play-state: running;
+        }
+
+        .box_2 {
+            height: 50%;
+            width: 50%;
+            border: 2px solid blue;
+            animation: Custom_Animation_2 3s ease-in 3s 5 forwards;
+        }
+
+        @keyframes Custom_Animation {
+            from {}
+
+            to {
+                background-color: yellow;
+            }
+        }
+
+        @keyframes Custom_Animation_2 {
+            from {
+                background-color: red;
+                color: black;
+                transform: rotate(180deg);
+            }
+
+            to {
+                color: whitesmoke;
+                background-color: yellow;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Animation">
+        <div class="box">
+            First Box
+        </div>
+        <div class="box_2">
+            Second Box
+        </div>
+    </div>
+
+
+</body>
+
+</html>

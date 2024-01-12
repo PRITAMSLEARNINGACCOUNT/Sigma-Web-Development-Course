@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Container_1 {
+    display: grid;
+    border: none;
+    height: 99.5vh;
+    width: 99.8vw;
+    grid-template-columns: 17vw 17vw 17vw;
+    grid-template-rows: 18vh 18vh 18vh 18vh;
+    justify-content: center;
+    align-content: center;
+    gap: 25px;
+}
+
+.box {
+    background-color: whitesmoke;
+    text-align: center;
+    height: 18vh;
+    width: 17vw;
+    /* border: 2px solid blue; */
+}
+
+#First_Box {
+    height: 8vh;
+    font-size: x-large;
+    /* border: 2px solid black; */
+    display: block;
+    padding-top: 1vw;
+
+}
+
+.Container_1 a {
+    text-decoration: none;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+button {
+    font-weight: 900;
+    margin: 2px;
+    font-weight: bold;
+    color: white;
+    border-radius: 6.5px;
+    border: none;
+    height: 4vh;
+    width: 7vw;
+
+}
+
+.button {
+    /* border: 2px solid blueviolet; */
+    /* width: ; */
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.button_1 {
+    background-color: #00b6d1;
+}
+
+.button_2 {
+
+    background-color: #81c780;
+}
+
+.Heading {
+    height: 8vh;
+    font-size: x-large;
+    /* border: 2px solid black; */
+    display: block;
+    padding-top: 1vw;
+}
+
+p {
+    font-size: medium;
+}
+
+@media screen and (max-width:1045px) {
+    .Container_1 {
+        display: grid;
+        border: none;
+        height: 99.5vh;
+        width:20.8vw;
+        grid-template-columns: 17vw;
+        /* justify-content: center; */
+        /* align-content: center; */
+        gap: 25px;
+    }
+    .box {
+        background-color: whitesmoke;
+        /* text-align: center; */
+        height: 30vh;
+        width: 95vw;
+        /* border: 2px solid blue; */
+    }
+    .button {
+        /* border: 2px solid blueviolet; */
+        /* width: ; */
+        padding: 10vw;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    button {
+        font-weight: 900;
+        margin: 2px;
+        font-weight: bold;
+        color: white;
+        border-radius: 6.5px;
+        border: none;
+        height: 4vh;
+        width: 50vw;
+    
+    }
+    
+}

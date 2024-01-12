@@ -1,0 +1,40 @@
+.Card{
+    margin: 12vw auto;
+    border: 1px solid black;
+    border-radius: 2vw;
+    height: 55vh;
+    width: 17vw;
+}
+.ImageTag{
+    padding: 0.2vw;
+    
+    border: 1px solid beige;
+    border-radius: 2vw;
+    height: 22vh;
+    width:16.5vw;
+}
+.Capsul{
+    border: 2px solid black;
+    border-radius: 2vw;
+    margin: 0.3vw;
+    padding: 5px;
+    display: inline-block;
+}
+.Heading{
+    margin: 0.5vw;
+}
+.Paragraph{
+    margin: 0.5vw;
+    font-size: large;
+}
+.Bottom{
+    width: 8vw;
+    height: 3vh;
+    border-radius: 2vw;
+    padding-left: 4vw;
+    padding-bottom: 2vh;
+    margin: 2vw auto;
+    border: 2px solid skyblue;
+    background-color: skyblue;
+    color: blue;
+}

@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Container_1 {
+    display: grid;
+    border: 2px solid black;
+    height: 30vh;
+    width: 50vw;
+    grid-template-columns: [First_Column]20vw [Second_Column]20vw;
+    grid-template-rows: [First_Row]50px [Second_Row]50px [Third_Row]50px [Fourth_Row]50px;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+}
+
+.Childs {
+    font-weight: bolder;
+    width: 20vw;
+    height: 2vh;
+    border: 2px solid black;
+}
+
+#Item_6 {
+    grid-row: Second_Row/Second_Row;
+    grid-column: Second_Column/Second_Column;
+
+}
+
+#Item_1 {
+    grid-row: 2/Second_Row;
+    grid-column: First_Column/Second_Column;
+
+}
+
+.Container_2 {
+    height: 45vh;
+    width: 35vw;
+    border: 2px solid black;
+    display: grid;
+    /* align-items: center; */
+    /* justify-items: center; */
+    grid-template-areas: "nav nav nav"
+        "side Content Content"
+        "footer footer footer";
+        gap: 10px;
+}
+
+#Second_Item_1 {
+    grid-area: nav;
+    height: 20vh;
+    border: 2px solid black;
+    background-color: red;
+}
+#Second_Item_2 {
+    grid-area: nav;
+    height: 20vh;
+}
+#Second_Item_3 {
+    grid-area: nav;
+    height: 20vh;
+}
+#Second_Item_4 {
+    grid-area: nav;
+    height: 20vh;
+}
+#Second_Item_5 {
+    grid-area: side;
+    height: 10vh;
+}
+#Second_Item_6 {
+    grid-area: side;
+    height: 10vh;
+}
+#Second_Item_7 {
+    grid-area: Content;
+    height: 10vh;
+}
+#Second_Item_8 {
+    grid-area: Content;
+    height: 10vh;
+}
+#Second_Item_9 {
+    border: 2px solid black;
+    grid-area: footer;
+    height: 10vh;
+}
+#Second_Item_10 {
+    grid-area: footer;
+    height: 10vh;
+}
+.Container_3{
+    border: 2px solid black;
+    height: 50vh;
+    width: 50vw;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+#Third_Item_1{
+    border: 2px solid black;
+    height: 20px;
+    width: 50px;
+    align-self: start;
+    justify-self: start;
+    
+}
+#Third_Item_3{
+    border: 2px solid black;
+    height: 20px;
+    width: 50px;
+    
+}
+#Third_Item_2{
+    border: 2px solid black;
+    height: 20px;
+    width: 50px;
+    
+}
+#Third_Item_4{
+    border: 2px solid black;
+    height: 20px;
+    width: 50px;
+    
+}

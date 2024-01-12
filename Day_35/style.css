@@ -1,0 +1,25 @@
+.Universal_Selector *{
+    background-color: aqua;
+}
+[data-X="Primary_Data"]{
+    background-color: blueviolet;
+}
+.box:first-child{
+    background-color: chartreuse;
+
+}
+.box:nth-child(3){
+    background-color: coral;
+}
+.box_1:nth-child(even){
+    background-color: violet;
+}
+.box_1:nth-child(odd){
+    background-color: goldenrod;
+}
+.Line_Selector::first-line{
+    color: tomato;
+}
+#Only_Paragraph,.Group_Selector{
+    background-color: teal;
+}

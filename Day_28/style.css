@@ -1,0 +1,72 @@
+.Static {
+    margin: 2vw auto;
+    border: 2px solid blue;
+    width: 25vw;
+    height: 15vh;
+    background-color: aquamarine;
+}
+
+.Relative {
+    position: relative;
+    bottom: 6.5vw;
+    left: 8vw;
+    margin: 2vw auto;
+    border: 2px solid black;
+    width: 25vw;
+    height: 15vh;
+    background-color: brown;
+}
+
+.Absolute {
+    position: absolute;
+    top: 2px;
+    border: 2px solid brown;
+    width: 25vw;
+    height: 15vh;
+    background-color: yellowgreen;
+}
+
+.Fixed {
+
+    position: fixed;
+    top: 35vw;
+    border: 2px solid red;
+    width: 25vw;
+    height: 15vh;
+    background-color: yellow;
+}
+
+.Sticky {
+    position: sticky;
+    top: 0;
+    margin-left: 70vw;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 50vh;
+    border: 2px solid rgb(255, 0, 238);
+    width: 25vw;
+    height: 15vh;
+    background-color: rgb(255, 127, 127);
+
+}
+
+.Relative_1 {
+    position: relative;
+    z-index: 1;
+    margin: 2vw auto;
+    border: 2px solid black;
+    width: 25vw;
+    height: 15vh;
+    background-color: skyblue;
+}
+
+.Relative_2 {
+    position: relative;
+    bottom: 12vh;
+    left: 8vw;
+    margin: 2vw auto;
+    border: 2px solid black;
+    width: 25vw;
+    height: 15vh;
+    background-color: beige;
+}

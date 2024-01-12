@@ -1,0 +1,76 @@
+.Container_1{
+    width: 50vw;
+    height: 50vw;
+    border: 2px solid black;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(0.15turn);
+}
+.box{
+    height: 50%;
+    width: 50%;
+    border: 2px solid black;
+    transform: rotate(5deg);
+}
+.Container_2{
+    width: 50vw;
+    height: 50vw;
+    border: 2px solid black;
+    background-color: rgb(208, 0, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1.1);
+}
+.box_2{
+    display: flex;
+    justify-content: center;
+    transform: rotateX(50deg) skew(10deg) translate(50%);
+    height: 50%;
+    width: 50%;
+    border: 2px solid black;
+}
+
+h1{
+    transform: rotate(0.25turn);
+}
+
+.Container_3{
+    transform: rotateZ(5deg);
+    width: 50vw;
+    height: 50vw;
+    border: 2px solid black;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box_3{
+    transform: rotateY(0.15turn);
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    width: 50%;
+    border: 2px solid black;
+}
+
+.Container_4{
+    width: 50vw;
+    height: 50vw;
+    border: 2px solid black;
+    background-color: rgb(255, 242, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box_4{
+    transform: rotate(0.15turn);
+    transform-origin: 0 15%;
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    width: 50%;
+    border: 2px solid black;
+}

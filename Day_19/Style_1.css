@@ -1,0 +1,23 @@
+#Keywords {
+    color: aqua;
+}
+
+#HexCodes {
+    color: #FF0000;
+}
+
+#RGB {
+    color: rgb(10, 225, 82);
+}
+
+#RGBA {
+    color: rgba(215, 20, 189, 0.696);
+}
+#HSL{
+    color: hsl(72, 100%, 51%);
+
+}
+#HSLA{
+    color: rgba(5, 218, 255, 0.673);
+
+}

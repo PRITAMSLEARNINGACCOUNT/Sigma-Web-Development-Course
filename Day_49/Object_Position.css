@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.Container {
+
+    display: grid;
+    grid-template-columns: 30vw 30vw 30vw;
+    gap: 5px;
+}
+
+.Image {
+
+    height: 45vh;
+    width: 20vw;
+    border: 2px solid black;
+}
+
+#Image_5 {
+    background-position: center;
+    background-image: url(https://m.media-amazon.com/images/I/91zTlD7AY1L._AC_UF1000,1000_QL80_.jpg);
+    background-repeat: no-repeat;
+}
+
+#Image_1 img {
+    height: 45vh;
+    width: 20vw;
+    object-fit: cover;
+}
+#Image_2 img {
+    height: 45vh;
+    width: 20vw;
+    object-fit: contain;
+}
+#Image_3 img {
+    height: 45vh;
+    width: 20vw;
+    object-fit: contain;
+    object-position: 1vw 1vw;
+}
+#Image_4 img {
+    height: 45vh;
+    width: 20vw;
+    object-fit: cover;
+    object-position: bottom center;
+}

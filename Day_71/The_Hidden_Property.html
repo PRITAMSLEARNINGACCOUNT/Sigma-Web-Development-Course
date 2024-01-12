@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hidden Property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .Container {
+            border: 2px solid black;
+            width: 98vw;
+            height: 98vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50%;
+            width: 50%;
+            border: 2px solid blue;
+            border-radius: 50px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 hidden>This Is The Hidden Element</h1>
+        <h2>This Is The Non-Hidden Element</h2>
+    </div>
+    <div class="Container">
+
+        <div class="box">This Is BOX 1</div>
+        <div class="box">This Is BOX 2</div>
+    </div>
+
+    <script src="The_Hidden_Property.js"></script>
+</body>
+
+</html>

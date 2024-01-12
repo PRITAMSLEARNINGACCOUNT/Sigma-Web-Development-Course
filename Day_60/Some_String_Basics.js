@@ -1,0 +1,10 @@
+alert("I Am Going To Demonstrate Basics Of Strings In This Programme.")
+alert("And For That I Am Going To Declare Some String Varriables.")
+let str = "Pritam Saha"
+alert("So The String Varriable I Declared Is " + str)
+alert("There Is A Method In String Which Returns The Length Of The String Let's Demonstrate That Method Using That Same Varriable.")
+alert("So The Length Of The String I Declared Is " + str.length)
+alert("Now I Am Going To Print That String One By Using Indexing.")
+alert("So The First Charecter Of The String Is " + str[0])
+alert("So The Second Charecter Of The String Is " + str[1])
+alert("So That's How I Can Access The Complete String Using String Indexing")

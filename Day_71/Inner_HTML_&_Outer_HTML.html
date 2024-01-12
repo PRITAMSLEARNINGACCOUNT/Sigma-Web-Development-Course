@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner & Outer HTML</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .Container {
+            border: 2px solid black;
+            width: 98vw;
+            height: 98vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50%;
+            width: 50%;
+            border: 2px solid blue;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Container">
+        This Is A Container
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <script src="Inner_HTML_&_Outer_HTML.js"></script>
+</body>
+
+</html>

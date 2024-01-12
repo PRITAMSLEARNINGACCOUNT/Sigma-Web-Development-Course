@@ -1,0 +1,55 @@
+h1 {
+    color: aqua;
+}
+
+div {
+    background-color: brown;
+}
+
+.Example {
+    background-color: blue;
+}
+
+.Condition {
+    background-color: blueviolet;
+}
+
+[data-X="Hello"] {
+    background-color: chartreuse;
+}
+
+#SecondDiv {
+    background-color: black;
+    color: yellow;
+}
+
+#InlineStyle {
+    background-color: coral;
+    color: red;
+}
+
+#InlineStyle_2 {
+    background-color: coral;
+    color: red;
+}
+
+.Nothing {
+    background-color: aquamarine !important;
+}
+
+.Last_Division:hover {
+    background-color: chartreuse;
+}
+
+#LastDiv:hover {
+    background-color: aquamarine;
+}
+.Positioning:hover{
+    background-color: bisque;
+}
+.Positioning:hover{
+    background-color: rgb(255, 196, 196);
+}
+.Positioning:hover{
+    background-color: rgb(200, 196, 255);
+}

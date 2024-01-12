@@ -1,0 +1,40 @@
+h2 {
+    color: aqua;
+}
+
+.Red {
+    background-color: blue;
+    color: red;
+}
+
+#SecondDivision {
+    background-color: yellow;
+    color: blueviolet;
+}
+
+div>p {
+    background-color: chocolate;
+}
+*{
+    margin: 0;
+    padding: 0;
+    background-color: wheat;
+}
+a:visited{
+    color: green;
+}
+a:active{
+    color: aqua;
+}
+a:link{
+    color: rgb(130, 238, 134);
+}
+a:hover{
+    color: aliceblue;
+}
+div p{
+    background-color: turquoise;
+}
+.hello:first-child{
+    background-color: tomato;
+}

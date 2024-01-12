@@ -1,0 +1,15 @@
+{
+  "name": "day_85",
+  "version": "1.0.0",
+  "description": "This Is Video 85",
+  "main": "node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.2",
+    "slugify": "^1.6.6"
+  }
+}

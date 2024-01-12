@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.Shadow {
+    width: 30vw;
+    border: 2px solid black;
+    margin: 30px auto;
+    box-shadow: 4px 8px 20px 3px black;
+}
+
+.Text_Shadow {
+    font-size: x-large;
+    height: 25vw;
+    border: 3px solid blue;
+    width: 50vw;
+    margin: 20px auto;
+    text-shadow: 5px 4px 4px #e31a0b;
+}
+
+.Outline {
+    height: 5vw;
+    width: 20vw;
+    font-size: large;
+    border: 5px solid pink;
+    margin: 30px auto;
+    outline: 2px solid brown;
+    outline-offset: 2px;
+    border-radius: 20px;
+}
