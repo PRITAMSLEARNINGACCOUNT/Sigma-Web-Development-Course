@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.Image {
+    display: flex;
+    /* border: none; */
+}
+
+.Thumbnail {
+    position: relative;
+}
+
+.Duration {
+    position: absolute;
+    left: 120px;
+    bottom: 8px;
+    font-weight: 500;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.Thumbnail img {
+    border-radius: 20px;
+    /* border: none; */
+}
+
+.Title {
+    color: white;
+    font-family: "Roboto", "Arial", sans-serif;
+    padding: 0 10px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.After_Image {
+    display: flex;
+    flex-direction: column;
+}
+
+.Same {
+    color: white;
+    font-family: "Roboto", "Arial", sans-serif;
+    padding: 5px 0;
+}
+
+.After_Title {
+    padding: 0 9px;
+    display: flex;
+}
+
+.Card {
+    background-color: black;
+    margin: 2px;
+}
+
+/* .Image-With-Title {
+    display: flex;
+    flex-direction: column;
+} */

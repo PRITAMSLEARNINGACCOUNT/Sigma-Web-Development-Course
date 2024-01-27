@@ -1,0 +1,7 @@
+const path = require("path")
+const path_module = require("path")
+// const os_module = require("os")
+console.log("Basename Using Path Module Is " + path_module.basename(__filename))
+console.log("Directory Name Using Path Module Is " + path_module.dirname(__dirname))
+console.log("Extension Name Using Path Module Is " + path_module.extname(__filename))
+console.log("This Is A Directory After Joining Two Paths Together - " + path.join("C:/", "Hello/World"))

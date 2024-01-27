@@ -1,0 +1,99 @@
+.Artist_Query {
+    gap: 10px;
+    overflow-y: scroll;
+    height: 73vh;
+    margin: 1vh;
+}
+
+.Artist_Name {
+    width: 60vw;
+
+}
+
+.Artist_Details {
+    width: 60vw;
+    gap: 25px;
+    color: #b3b3b3fd;
+}
+
+.circle {
+    height: 25vh;
+    width: 12vw;
+    border-radius: 200vw;
+}
+
+.First_Part_Details {
+    color: white;
+    gap: 1vw;
+    margin: 4vh 0;
+}
+
+.First_Part {
+    gap: 10px;
+    align-items: end;
+    width: 74.97vw;
+    height: 50%;
+}
+
+.Track_Details {
+    color: white;
+    justify-content: space-evenly;
+}
+
+.Serial_No {
+    width: 1vw;
+}
+
+.Track_Image {
+    width: 18vw;
+    gap: 20px;
+}
+
+.Track_Title {
+    width: 35vw;
+
+}
+
+.Listener_Amount {
+    width: 10vw;
+
+}
+
+.Track_Duration {
+
+    width: 2vw;
+}
+
+.Second_Part {
+    height: 100%;
+    width: 74.97vw;
+}
+
+.Second_Part h3 {
+    color: white;
+}
+
+.Related_Artists {
+    display: grid;
+    grid-template-columns: 15vw 15vw 15vw 15vw 15vw;
+    grid-template-rows: 35vh;
+}
+
+.Artist_Albums {
+    display: grid;
+    grid-template-columns: 15vw 15vw 15vw 15vw 15vw;
+    grid-template-rows: 35vh;
+}
+
+.Related_Artists img {
+    height: 27vh;
+    width: 15vw;
+    border-radius: 80vw;
+}
+
+.Image_With_Name h2 {
+    text-align: center;
+    width: 15vw;
+    color: white;
+    margin: 10px 0;
+}
