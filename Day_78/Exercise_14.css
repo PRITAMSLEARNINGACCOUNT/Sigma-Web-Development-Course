@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: green;
+}
+
+.Container {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    /* color: white; */
+    /* border: 2px solid black; */
+}
+
+.Terminal {
+    margin: 200px;
+    height: 60vh;
+    width: 30vw;
+    color: black;
+    text-align: center;
+    /* border: 2px solid black; */
+
+}
+
+.Terminal h1 {
+    margin: 20px;
+}

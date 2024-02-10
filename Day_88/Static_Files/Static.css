@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: green;
+    font-size: xx-large;
+
+}
+
+.Container {
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    height: 100vh;
+    background-color: black;
+}
+
+.box {
+    text-align: center;
+    color: green;
+    height: 50vh;
+    width: 50vw;
+}
+
+.box p {
+    padding: 2vh;
+}
