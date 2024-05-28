@@ -1,0 +1,23 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+.grid {
+  margin-top: 20px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 15vw 15vw 15vw;
+  /* grid-template-rows: 50vh 50vh 50vh; */
+  gap: 10px;
+}
+.id{
+  text-align: center;
+  font-size: 20px;
+}
+.card {
+  background-color: blue;
+  color: white;
+}
