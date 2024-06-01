@@ -1,19 +1,15 @@
-import { useState } from 'react'
-import './App.css'
-import Login_Form from './Components/Login_Form'
-import Navbar from './Components/Navbar'
+import "./App.css";
+import LoginForm from "./Components/Login_Form";
+import Navbar from "./Components/Navbar";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <Navbar />
       <div className="container">
-        <Login_Form />
-
+        <LoginForm />
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

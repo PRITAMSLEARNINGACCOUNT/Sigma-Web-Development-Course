@@ -1,5 +1,12 @@
+import ReactRouterImg from "./React_Router.png";
 function Home() {
-  return <div>This Is A Home Page</div>;
+  return (
+    <img
+      src={ReactRouterImg}
+      alt="Image Not Founded"
+      style={{ height: "100%", width: "100%" }}
+    />
+  );
 }
 
 export default Home;
