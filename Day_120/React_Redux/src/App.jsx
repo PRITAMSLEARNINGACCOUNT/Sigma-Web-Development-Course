@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+// import { useSelector, useDispatch } from "react-redux";
+import {
+  increment,
+  decrement,
+  incrementByAmount,
+} from "./Redux_Files/Reducers_With_Action_Creators";
+import Navbar from "./Components/Navbar";
+import { useDispatch } from "react-redux";
 function App() {
-  const [count, setCount] = useState(0)
-
+  // const Value = useSelector((state) => state.Reducers.value);
+  const Dispatch = useDispatch();
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Navbar />
+      <div className="main">
+        <h1>Demonstration</h1>
+        <div className="card">
+          <button
+            onClick={() => {
+              Dispatch(increment());
+            }}
+          >
+            Increment
+          </button>
+          <button
+            onClick={() => {
+              Dispatch(decrement());
+            }}
+          >
+            Decrement
+          </button>
+          <button
+            onClick={() => {
+              Dispatch(incrementByAmount(20));
+            }}
+          >
+            Increment By 20
+          </button>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
