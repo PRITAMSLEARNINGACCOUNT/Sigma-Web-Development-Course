@@ -14,6 +14,7 @@ function Password_Maneger() {
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm();
   async function Submit(Data) {
@@ -62,6 +63,7 @@ function Password_Maneger() {
     //   passRef.current.type = "password";
     // }
   }
+
   return (
     <>
       {/* Same as */}
@@ -77,7 +79,10 @@ function Password_Maneger() {
         {/* <h3 className="text-xl text-center text-purple-400">
           Store Your Passwords Seamlessly
         </h3> */}
-        <form className="flex flex-col gap-10" onSubmit={handleSubmit(Submit)}>
+        <form
+          className="flex flex-col md:gap-10 gap-5"
+          onSubmit={handleSubmit(Submit)}
+        >
           <div className="w-full flex justify-center">
             <input
               type="text"
@@ -111,9 +116,10 @@ function Password_Maneger() {
                   })
               : ""}
           </div>
-          <div className="w-[70vw] flex justify-center gap-3">
+          <div className="w-[70vw] flex flex-col items-center md:flex-row  justify-center gap-3">
             <input
               type="text"
+              name="Username"
               className="rounded-full border border-pink-500 w-[50vw] p-5"
               placeholder="Enter The Username"
               {...register("Username", {
@@ -146,7 +152,8 @@ function Password_Maneger() {
             <div className="flex justify-start items-center relative">
               <input
                 type={passRef}
-                className="rounded-full border border-pink-500 w-[20vw] p-5"
+                name="Password"
+                className="rounded-full border border-pink-500 md:w-[20vw] p-5"
                 placeholder="Enter The Password"
                 {...register("Password", {
                   required: { value: true, message: "Password Field Required" },
@@ -199,7 +206,7 @@ function Password_Maneger() {
           </div>
         </form>
 
-        <Passwords_Table />
+        <Passwords_Table setValue={setValue} />
       </div>
     </>
   );

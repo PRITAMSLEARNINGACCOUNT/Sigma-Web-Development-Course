@@ -32,12 +32,16 @@ function Navbar() {
           <button className="rounded-full border border-pink-200 w-20 h-10 hover:bg-purple-500">
             Login
           </button> */}
-          <div className="flex items-center gap-2 rounded-full border border-pink-200 w-35 h-10 hover:bg-purple-500 cursor-pointer">
+          <a
+            className="flex items-center gap-2 rounded-full border border-pink-200 w-35 h-10 hover:bg-purple-500 cursor-pointer"
+            target="_blank"
+            href="https://github.com/PRITAMSLEARNINGACCOUNT/Sigma-Web-Development-Course/tree/main/Day_130(Project%20-%203)/Password_Maneger"
+          >
             <img src={GithubLogo} alt="Logo" className="w-10 h-10 invert" />
             <button type="button" className="w-30 font-bold">
               GitHub
             </button>
-          </div>
+          </a>
           <div
             className="flex justify-center items-center cursor-pointer"
             onClick={() => {
