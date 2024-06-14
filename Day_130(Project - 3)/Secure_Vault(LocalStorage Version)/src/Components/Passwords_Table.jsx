@@ -1,5 +1,6 @@
 // import Edit from "./Icons/Edit.gif";
 // import Delete from "./Icons/Delete.gif";
+// import "../App.css";
 import { toast } from "react-toastify";
 import { useContext } from "react";
 import Mode from "../Context/Light_Dark_Mode";
@@ -57,11 +58,11 @@ function Passwords_Table({ setValue }) {
   return (
     <>
       {mode.ToggleMode ? (
-        <h1 className="text-purple-400 text-3xl font-bold w-[70%] underline italic">
+        <h1 className="text-purple-400 text-3xl font-bold md:w-[70%] w-[100%] text-center md:text-left underline italic">
           Saved Passwords
         </h1>
       ) : (
-        <h1 className="text-white text-3xl font-bold w-[70%] underline italic">
+        <h1 className="text-white text-3xl font-bold md:w-[70%] w-[100%] text-center md:text-left underline italic">
           Saved Passwords
         </h1>
       )}
@@ -82,104 +83,106 @@ function Passwords_Table({ setValue }) {
         </>
       ) : (
         <div className="rounded-md flex justify-center items-center border-pink-300 md:w-[70%] w-[100%] border bg-green-400  overflow-hidden">
-          <table className="md:table-auto table:fixed w-[100%] border text-lg">
-            <thead>
-              <tr>
-                <th className="md:text-center md:p-3 md:table-cell hidden">
-                  Website URL
-                </th>
-                <th className="text-center p-3">Username</th>
-                <th className="text-center p-3">Passwords</th>
-                <th className="md:text-center md:p-3 md:table-cell hidden">
-                  Actions
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {Passes.Passwords.map((element, index) => {
-                return (
-                  <tr key={index}>
-                    <td className="md:text-center md:p-3 md:table-cell hidden">
-                      <a
-                        href={element.Website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {element.Website}
-                      </a>
-                    </td>
+          <div className="overflow-auto w-[100%]">
+            <table className="md:table-auto table:fixed w-[100%] border text-lg">
+              <thead>
+                <tr>
+                  <th className="text-center p-3">Website URL</th>
+                  <th className="md:text-center md:p-3 md:table-cell hidden">
+                    Username
+                  </th>
+                  <th className="text-center p-3">Passwords</th>
+                  <th className="md:text-center md:p-3 md:table-cell hidden">
+                    Actions
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {Passes.Passwords.map((element, index) => {
+                  return (
+                    <tr key={index}>
+                      <td className="text-center p-3">
+                        <a
+                          href={element.Website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {element.Website}
+                        </a>
+                      </td>
 
-                    <td className="text-center p-3">
-                      <div className="flex justify-center items-center gap-3">
-                        {element.Username}
-                        <lord-icon
-                          src="https://cdn.lordicon.com/lyrrgrsl.json"
-                          trigger="hover"
-                          style={{
-                            width: "30px",
-                            height: "30px",
-                            cursor: "pointer",
-                          }}
-                          onClick={() => {
-                            // console.log("Copy Button Is Going To Work");
-                            CopyPass(element.Username);
-                          }}
-                        ></lord-icon>
-                      </div>
-                    </td>
-                    <td className="text-center p-3">
-                      <div className="flex justify-center items-center gap-3">
-                        {"*".repeat(element.Password.length)}
-                        <lord-icon
-                          src="https://cdn.lordicon.com/lyrrgrsl.json"
-                          trigger="hover"
-                          style={{
-                            width: "30px",
-                            height: "30px",
-                            cursor: "pointer",
-                          }}
-                          onClick={() => {
-                            // console.log("Copy Button Is Going To Work");
-                            CopyPass(element.Password);
-                          }}
-                        ></lord-icon>
-                      </div>
-                    </td>
-                    <td className="md:text-center md:p-3 md:table-cell hidden">
-                      <div className="flex justify-center items-center">
-                        {/* <img src={Edit} alt="Edit_Icon" className="w-10 h-10" />
+                      <td className="md:text-center md:p-3 md:table-cell hidden">
+                        <div className="flex justify-center items-center gap-3">
+                          {element.Username}
+                          <lord-icon
+                            src="https://cdn.lordicon.com/lyrrgrsl.json"
+                            trigger="hover"
+                            style={{
+                              width: "30px",
+                              height: "30px",
+                              cursor: "pointer",
+                            }}
+                            onClick={() => {
+                              // console.log("Copy Button Is Going To Work");
+                              CopyPass(element.Username);
+                            }}
+                          ></lord-icon>
+                        </div>
+                      </td>
+                      <td className="text-center p-3">
+                        <div className="flex justify-center items-center gap-3">
+                          {"*".repeat(element.Password.length)}
+                          <lord-icon
+                            src="https://cdn.lordicon.com/lyrrgrsl.json"
+                            trigger="hover"
+                            style={{
+                              width: "30px",
+                              height: "30px",
+                              cursor: "pointer",
+                            }}
+                            onClick={() => {
+                              // console.log("Copy Button Is Going To Work");
+                              CopyPass(element.Password);
+                            }}
+                          ></lord-icon>
+                        </div>
+                      </td>
+                      <td className="md:text-center md:p-3 md:table-cell hidden">
+                        <div className="flex justify-center items-center">
+                          {/* <img src={Edit} alt="Edit_Icon" className="w-10 h-10" />
   <img src={Delete} alt="Delete_Icon" className="w-10 h-10" /> */}
-                        <lord-icon
-                          src="https://cdn.lordicon.com/wuvorxbv.json"
-                          trigger="hover"
-                          onClick={() => {
-                            Edit(element);
-                          }}
-                          style={{
-                            width: "40px",
-                            height: "40px",
-                            cursor: "pointer",
-                          }}
-                        ></lord-icon>
-                        <lord-icon
-                          src="https://cdn.lordicon.com/drxwpfop.json"
-                          trigger="hover"
-                          style={{
-                            width: "40px",
-                            height: "40px",
-                            cursor: "pointer",
-                          }}
-                          onClick={() => {
-                            Delete(element);
-                          }}
-                        ></lord-icon>
-                      </div>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+                          <lord-icon
+                            src="https://cdn.lordicon.com/wuvorxbv.json"
+                            trigger="hover"
+                            onClick={() => {
+                              Edit(element);
+                            }}
+                            style={{
+                              width: "40px",
+                              height: "40px",
+                              cursor: "pointer",
+                            }}
+                          ></lord-icon>
+                          <lord-icon
+                            src="https://cdn.lordicon.com/drxwpfop.json"
+                            trigger="hover"
+                            style={{
+                              width: "40px",
+                              height: "40px",
+                              cursor: "pointer",
+                            }}
+                            onClick={() => {
+                              Delete(element);
+                            }}
+                          ></lord-icon>
+                        </div>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
       )}
     </>

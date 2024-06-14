@@ -68,12 +68,12 @@ function Password_Maneger() {
     <>
       {/* Same as */}
       <ToastContainer />
-      <div className="main flex flex-col items-center w-full gap-10 py-10 min-h-[94.6vh]">
-        <h1 className="font-bold text-3xl text-purple-400">
-          Welcome To Secure Vault -
+      <div className="main flex flex-col items-center w-full gap-10 py-10 min-h-[94.6vh] ">
+        <h1 className="text-center font-bold text-3xl text-purple-400">
+          Welcome To Secure Vault
           <span className="text-purple-300">
-            {" "}
-            Store Your Passwords Securely
+            
+             {" "}- Store Your Passwords Securely
           </span>
         </h1>
         {/* <h3 className="text-xl text-center text-purple-400">

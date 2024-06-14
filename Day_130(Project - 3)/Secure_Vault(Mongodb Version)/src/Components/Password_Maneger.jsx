@@ -1,16 +1,42 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 // import React from "react";
-import { v4 as uuidv4 } from "uuid";
+// import { v4 as uuidv4 } from "uuid";
 import PassContext from "../Context/Passwords";
 import Mode from "../Context/Light_Dark_Mode";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import Passwords_Table from "./Passwords_Table";
+import { useNavigate } from "react-router-dom";
 function Password_Maneger() {
   const [passRef, setpassRef] = useState("password");
   const passcontext = useContext(PassContext);
   const Theme = useContext(Mode);
+  const Redirect = useNavigate();
+  useEffect(() => {
+    if (
+      localStorage.getItem("Auth-Token") === undefined ||
+      localStorage.getItem("Auth-Token") === null
+    ) {
+      Redirect("/Login");
+    } else {
+      fetch("http://localhost:3000/Password", {
+        headers: {
+          token: localStorage.getItem("Auth-Token"),
+          "Content-Type": "application/json",
+        },
+      })
+        .then((e) => {
+          return e.json();
+        })
+        .then((e) => {
+          // console.log(e.length);
+          if (!e.Error) {
+            passcontext.setPasswords(e);
+          }
+        });
+    }
+  }, []);
   const {
     register,
     handleSubmit,
@@ -18,36 +44,92 @@ function Password_Maneger() {
     formState: { errors },
   } = useForm();
   async function Submit(Data) {
-    const newData = { ...Data, id: uuidv4() };
+    // const newData = { ...Data, id: uuidv4() };
     // console.log(newData);
-    await passcontext.setPasswords([...passcontext.Passwords, newData]);
-    await localStorage.setItem(
-      "Passwords",
-      JSON.stringify([...passcontext.Passwords, newData])
-    );
-
-    if (Theme.ToggleMode) {
-      toast("Password Added Successfully", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
+    try {
+      let Response = await fetch("http://localhost:3000/Password/", {
+        method: "POST",
+        headers: {
+          token: localStorage.getItem("Auth-Token"),
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(Data),
       });
-    } else {
-      toast("Password Added Successfully", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      });
+      await passcontext.setPasswords([...passcontext.Passwords, Data]);
+      Response = await Response.json();
+      if (Response.insertedId) {
+        if (Theme.ToggleMode) {
+          toast("Password Added Successfully", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        } else {
+          toast("Password Added Successfully", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        }
+      } else {
+        if (Theme.ToggleMode) {
+          toast("Some Error Occured While Adding Password", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        } else {
+          toast("Some Error Occured While Adding Password", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        }
+      }
+    } catch (error) {
+      if (Theme.ToggleMode) {
+        toast("Internal Server Error", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      } else {
+        toast("Internal Server Error", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      }
     }
   }
   function ShowPass() {

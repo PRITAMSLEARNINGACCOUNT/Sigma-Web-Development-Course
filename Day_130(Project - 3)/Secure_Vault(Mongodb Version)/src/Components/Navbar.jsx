@@ -2,10 +2,20 @@ import Mode from "../Context/Light_Dark_Mode";
 import { useContext } from "react";
 import Night from "./Icons/Night.gif";
 import Logo from "./Icons/Website_Logo.png";
-import GithubLogo from "./Icons/Github.png";
+import { useNavigate } from "react-router-dom";
 function Navbar() {
   const mode = useContext(Mode);
-
+  const Redirect = useNavigate();
+  const SignUp = () => {
+    Redirect("/Signup");
+  };
+  const Login = () => {
+    Redirect("/Login");
+  };
+  function Logout() {
+    localStorage.removeItem("Auth-Token");
+    Redirect("/Login");
+  }
   return (
     <>
       <nav
@@ -26,22 +36,30 @@ function Navbar() {
           </span>
         </div>
         <ul className="flex gap-3 ">
-          {/* <button className="rounded-full border w-20 h-10 border-pink-200 hover:bg-purple-500">
-            Signup
-          </button>
-          <button className="rounded-full border border-pink-200 w-20 h-10 hover:bg-purple-500">
-            Login
-          </button> */}
-          <a
-            className="flex items-center gap-2 rounded-full border border-pink-200 w-35 h-10 hover:bg-purple-500 cursor-pointer"
-            target="_blank"
-            href="https://github.com/PRITAMSLEARNINGACCOUNT/Sigma-Web-Development-Course/tree/main/Day_130(Project%20-%203)/Password_Maneger"
-          >
-            <img src={GithubLogo} alt="Logo" className="w-10 h-10 invert" />
-            <button type="button" className="w-30 font-bold">
-              GitHub
+          {localStorage.getItem("Auth-Token") ? (
+            <button
+              onClick={Logout}
+              className="rounded-full border w-20 h-10 border-pink-200 hover:bg-purple-500"
+            >
+              Logout
             </button>
-          </a>
+          ) : (
+            <>
+              <button
+                onClick={SignUp}
+                className="rounded-full border w-20 h-10 border-pink-200 hover:bg-purple-500"
+              >
+                Signup
+              </button>
+              <button
+                onClick={Login}
+                className="rounded-full border border-pink-200 w-20 h-10 hover:bg-purple-500"
+              >
+                Login
+              </button>
+            </>
+          )}
+
           <div
             className="flex justify-center items-center cursor-pointer"
             onClick={() => {

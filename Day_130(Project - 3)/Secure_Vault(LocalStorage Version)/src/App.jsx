@@ -1,4 +1,3 @@
-import "./App.css";
 import Navbar from "./Components/Navbar";
 import Password_Maneger from "./Components/Password_Maneger";
 import Mode from "./Context/Light_Dark_Mode";
@@ -31,7 +30,7 @@ function App() {
               <Password_Maneger />
             </div>
           )}
-          <div></div>
+          {/* <div></div> */}
         </Mode.Provider>
       </PassContext.Provider>
     </>
