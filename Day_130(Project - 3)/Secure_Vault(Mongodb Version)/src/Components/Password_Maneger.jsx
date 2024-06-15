@@ -14,6 +14,7 @@ function Password_Maneger() {
   const Theme = useContext(Mode);
   const Redirect = useNavigate();
   useEffect(() => {
+    // console.log("HELLO");
     if (
       localStorage.getItem("Auth-Token") === undefined ||
       localStorage.getItem("Auth-Token") === null
@@ -23,7 +24,7 @@ function Password_Maneger() {
       fetch("http://localhost:3000/Password", {
         headers: {
           token: localStorage.getItem("Auth-Token"),
-          "Content-Type": "application/json",
+          // "Content-Type": "application/json",
         },
       })
         .then((e) => {
@@ -47,6 +48,7 @@ function Password_Maneger() {
     // const newData = { ...Data, id: uuidv4() };
     // console.log(newData);
     try {
+      console.log(Data);
       let Response = await fetch("http://localhost:3000/Password/", {
         method: "POST",
         headers: {
@@ -201,16 +203,16 @@ function Password_Maneger() {
           <div className="w-[70vw] flex flex-col items-center md:flex-row  justify-center gap-3">
             <input
               type="text"
-              name="Username"
+              name="user"
               className="rounded-full border border-pink-500 w-[50vw] p-5"
               placeholder="Enter The Username"
-              {...register("Username", {
+              {...register("user", {
                 required: { value: true, message: "Username Field Required" },
               })}
             />
-            {errors.Username
+            {errors.user
               ? Theme.ToggleMode
-                ? toast(errors.Username.message, {
+                ? toast(errors.user.message, {
                     position: "top-left",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -220,7 +222,7 @@ function Password_Maneger() {
                     progress: undefined,
                     theme: "light",
                   })
-                : toast(errors.Username.message, {
+                : toast(errors.user.message, {
                     position: "top-left",
                     autoClose: 5000,
                     hideProgressBar: false,

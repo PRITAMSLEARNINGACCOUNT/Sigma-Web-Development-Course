@@ -6,10 +6,8 @@ import { config } from "dotenv";
 import Bcrypt from "bcryptjs";
 config();
 const collection = Database.collection("UserCollection");
+
 // Defining Different EndPoints For Users
-// app.get("/", (req, res) => {
-//   res.send("GET USER");
-// });
 
 app.post("/Create", async (req, res) => {
   try {

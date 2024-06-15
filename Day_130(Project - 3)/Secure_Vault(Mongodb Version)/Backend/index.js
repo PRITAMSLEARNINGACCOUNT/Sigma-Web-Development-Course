@@ -1,14 +1,11 @@
 import express from "express";
-// import Database from "./Database_Connection.js";
 import CORS from "cors";
 import { app as User_Auth } from "./Routes/User_Route.js";
 import Password from "./Routes/Password_Route.js";
 const app = express();
 
 const port = 3000;
-// const Database_Name = "SecureVaultDB";
-// const db = Database.db(Database_Name);
-// const collection = db.collection("SecureVaultCollection");
+
 
 // Using Middlewares
 

@@ -1,7 +1,6 @@
 import JWT from "jsonwebtoken";
 import { collection } from "./Routes/User_Route.js";
 import { config } from "dotenv";
-import { ObjectId } from "mongodb";
 config();
 const Authorization = async (Request, Response, Next) => {
   try {

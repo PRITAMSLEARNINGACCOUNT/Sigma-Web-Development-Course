@@ -1,13 +1,14 @@
 import { MongoClient } from "mongodb";
+import { config } from "dotenv";
 
 // Database Connection
-const url = "mongodb://localhost:27017";
-// const url =
-//   "mongodb+srv://pritamstech:PS0896721234@learningcluster.v3xrpyk.mongodb.net/";
+
+config();
+const url = process.env.MONGO_URI;
 let client = new MongoClient(url);
 
 await client.connect();
 const Database_Name = "SecureVaultDB";
 const db = client.db(Database_Name);
-console.log("Connected successfully to server");
+console.log("Connected successfully to Mongodb");
 export default db;

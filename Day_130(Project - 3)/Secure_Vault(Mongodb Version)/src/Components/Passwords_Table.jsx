@@ -12,46 +12,56 @@ function Passwords_Table({ setValue }) {
   }
 
   async function Edit(ele) {
-    setValue("Username", ele.Username);
+    setValue("user", ele.user);
     setValue("Password", ele.Password);
     setValue("Website", ele.Website);
-
-    let NewPasses = Passes.Passwords.filter((e) => {
-      return e.id !== ele.id;
-    });
+    Delete(ele, "option");
+    // let NewPasses = Passes.Passwords.filter((e) => {
+    //   return e.id !== ele.id;
+    // });
     // console.log(NewPasses);
-    await Passes.setPasswords(NewPasses);
-    await localStorage.setItem("Passwords", JSON.stringify(NewPasses));
+    // await Passes.setPasswords(NewPasses);
+    // await localStorage.setItem("Passwords", JSON.stringify(NewPasses));
   }
-  async function Delete(element) {
+  async function Delete(element, option = null) {
     let NewPasses = Passes.Passwords.filter((e) => {
-      return e.id !== element.id;
+      return e._id !== element._id;
     });
     console.log(NewPasses);
     await Passes.setPasswords(NewPasses);
-    await localStorage.setItem("Passwords", JSON.stringify(NewPasses));
-    if (Mode.ToggleMode) {
-      toast("Password Deleted Successfully", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-    } else {
-      toast("Password Deleted Successfully", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      });
+    await fetch("http://localhost:3000/Password", {
+      method: "DELETE",
+      headers: {
+        token: localStorage.getItem("Auth-Token"),
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ _id: element._id }),
+    });
+    // await localStorage.setItem("Passwords", JSON.stringify(NewPasses));
+    if (!option) {
+      if (Mode.ToggleMode) {
+        toast("Password Deleted Successfully", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      } else {
+        toast("Password Deleted Successfully", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
+      }
     }
   }
   return (
@@ -65,7 +75,7 @@ function Passwords_Table({ setValue }) {
           Saved Passwords
         </h1>
       )}
-      {console.log(Passes.Passwords)}
+      {/* {console.log(Passes.Passwords)} */}
       {Passes.Passwords.length === 0 ? (
         <>
           {mode.ToggleMode ? (
@@ -111,7 +121,7 @@ function Passwords_Table({ setValue }) {
 
                     <td className="text-center p-3">
                       <div className="flex justify-center items-center gap-3">
-                        {element.Username}
+                        {element.user}
                         <lord-icon
                           src="https://cdn.lordicon.com/lyrrgrsl.json"
                           trigger="hover"
@@ -122,14 +132,14 @@ function Passwords_Table({ setValue }) {
                           }}
                           onClick={() => {
                             // console.log("Copy Button Is Going To Work");
-                            CopyPass(element.Username);
+                            CopyPass(element.user);
                           }}
                         ></lord-icon>
                       </div>
                     </td>
                     <td className="text-center p-3">
                       <div className="flex justify-center items-center gap-3">
-                        {element.Password}
+                        {"*".repeat(element.Password.length)}
                         <lord-icon
                           src="https://cdn.lordicon.com/lyrrgrsl.json"
                           trigger="hover"

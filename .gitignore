@@ -2,3 +2,5 @@
 **/node_modules/
 **/package.json
 **/package-lock.json
+**/.env
+Day_130(Project - 3)/Secure_Vault(Mongodb Version)/Backend/.env
