@@ -1,7 +1,5 @@
 import { useState, useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
-// import React from "react";
-// import { v4 as uuidv4 } from "uuid";
 import PassContext from "../Context/Passwords";
 import Mode from "../Context/Light_Dark_Mode";
 import "react-toastify/dist/ReactToastify.css";
@@ -14,24 +12,21 @@ function Password_Maneger() {
   const Theme = useContext(Mode);
   const Redirect = useNavigate();
   useEffect(() => {
-    // console.log("HELLO");
     if (
       localStorage.getItem("Auth-Token") === undefined ||
       localStorage.getItem("Auth-Token") === null
     ) {
       Redirect("/Login");
     } else {
-      fetch("http://localhost:3000/Password", {
+      fetch(import.meta.env.VITE_GET_ALL_PASSWORDS, {
         headers: {
           token: localStorage.getItem("Auth-Token"),
-          // "Content-Type": "application/json",
         },
       })
         .then((e) => {
           return e.json();
         })
         .then((e) => {
-          // console.log(e.length);
           if (!e.Error) {
             passcontext.setPasswords(e);
           }
@@ -45,11 +40,9 @@ function Password_Maneger() {
     formState: { errors },
   } = useForm();
   async function Submit(Data) {
-    // const newData = { ...Data, id: uuidv4() };
-    // console.log(newData);
     try {
       console.log(Data);
-      let Response = await fetch("http://localhost:3000/Password/", {
+      let Response = await fetch(import.meta.env.VITE_CREATE_PASSWORDS, {
         method: "POST",
         headers: {
           token: localStorage.getItem("Auth-Token"),
@@ -140,17 +133,10 @@ function Password_Maneger() {
     } else {
       setpassRef("password");
     }
-    // console.log(passRef.current);
-    // if (passRef.current.type === "password") {
-    //   passRef.current.type = "text";
-    // } else {
-    //   passRef.current.type = "password";
-    // }
   }
 
   return (
     <>
-      {/* Same as */}
       <ToastContainer />
       <div className="main flex flex-col items-center w-full gap-10 py-10 min-h-[94.6vh]">
         <h1 className="font-bold text-3xl text-purple-400">
@@ -160,9 +146,7 @@ function Password_Maneger() {
             Store Your Passwords Securely
           </span>
         </h1>
-        {/* <h3 className="text-xl text-center text-purple-400">
-          Store Your Passwords Seamlessly
-        </h3> */}
+
         <form
           className="flex flex-col md:gap-10 gap-5"
           onSubmit={handleSubmit(Submit)}
@@ -279,7 +263,6 @@ function Password_Maneger() {
             <button
               className="rounded-full p-5 bg-blue-100 flex justify-center items-center"
               type="submit"
-              // onClick={(event) => {}}
             >
               <lord-icon
                 src="https://cdn.lordicon.com/rcgrnzji.json"

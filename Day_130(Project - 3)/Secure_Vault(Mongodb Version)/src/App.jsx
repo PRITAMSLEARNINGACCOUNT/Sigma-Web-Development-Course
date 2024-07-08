@@ -7,11 +7,9 @@ import Mode from "./Context/Light_Dark_Mode";
 import PassContext from "./Context/Passwords";
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import { ToastContainer } from "react-toastify";
 function App() {
   const [ToggleMode, setMode] = useState(false);
   const [Passwords, setPasswords] = useState([]);
-
   return (
     <>
       <BrowserRouter>
@@ -62,7 +60,6 @@ function App() {
                 }
               />
 
-              {/* <div></div> */}
             </Routes>
           </Mode.Provider>
         </PassContext.Provider>

@@ -13,27 +13,10 @@ const Login_Page = () => {
     } else {
       setpassRef("password");
     }
-    // console.log(passRef.current);
-    // if (passRef.current.type === "password") {
-    //   passRef.current.type = "text";
-    // } else {
-    //   passRef.current.type = "password";
-    // }
   }
   const Submit = async (Data) => {
-    // try {
-    //   let Result = await fetch("http://localhost:3000/auth/Login", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(Data),
-    //   });
-    // } catch (error) {
-    //   console.log(error);
-    // }
     try {
-      let Result = await fetch("http://localhost:3000/auth/Login", {
+      let Result = await fetch(import.meta.env.VITE_USER_LOGIN, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -41,8 +24,7 @@ const Login_Page = () => {
         body: JSON.stringify(Data),
       });
       Result = await Result.json();
-      // console.log(Result);
-      // console.log(JSON.stringify(Data));
+      console.log(Result)
       if (Result.Token) {
         localStorage.setItem("Auth-Token", Result.Token);
         // console.log("Login Successfull");
@@ -251,7 +233,6 @@ const Login_Page = () => {
               <button
                 className="rounded-full p-5 md:w-[5vw]  bg-blue-100 flex justify-center items-center text-xl"
                 type="submit"
-                // onClick={(event) => {}}
               >
                 LogIn
               </button>

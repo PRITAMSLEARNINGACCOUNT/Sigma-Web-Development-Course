@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.custom-bg {
+  background-color: #39b9f92b;
+}
+
+@layer utilities {
+  .Custom-Grid {
+    grid-template-rows: minmax(auto, 45vh);
+  }
+}
+
+.redclass {
+  background-color: #f93636 !important;
+}
+
+.redclass {
+  background-color: #f93636 !important;
+}

@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-// import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import { useContext, useState } from "react";
 import Mode from "../Context/Light_Dark_Mode";
@@ -11,14 +10,7 @@ const Signup_Page = () => {
     } else {
       setpassRef("password");
     }
-    // console.log(passRef.current);
-    // if (passRef.current.type === "password") {
-    //   passRef.current.type = "text";
-    // } else {
-    //   passRef.current.type = "password";
-    // }
   }
-  // const Navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -27,7 +19,7 @@ const Signup_Page = () => {
   } = useForm();
   async function Submit(Data) {
     try {
-      let Result = await fetch("http://localhost:3000/auth/Create", {
+      let Result = await fetch(import.meta.env.VITE_USER_CREATE, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -35,10 +27,7 @@ const Signup_Page = () => {
         body: JSON.stringify(Data),
       });
       Result = await Result.json();
-      // console.log(Result);
-      // console.log(JSON.stringify(Data));
       if (Result.insertedId) {
-        // localStorage.setItem("Auth-Token", Result.Token);
         // console.log("Signed Up Successfull");
         if (Theme.ToggleMode) {
           toast("User Created Successfully", {
@@ -63,7 +52,6 @@ const Signup_Page = () => {
             theme: "dark",
           });
         }
-        // Navigate("/Login");
       } else {
         // console.log("SignUp Unsucessfull");
         if (Theme.ToggleMode) {
@@ -274,7 +262,6 @@ const Signup_Page = () => {
               <button
                 className="rounded-full p-5 md:w-[5vw]  bg-blue-100 flex justify-center items-center text-xl"
                 type="submit"
-                // onClick={(event) => {}}
               >
                 Signup
               </button>

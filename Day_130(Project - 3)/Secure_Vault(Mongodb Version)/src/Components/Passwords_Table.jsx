@@ -1,5 +1,3 @@
-// import Edit from "./Icons/Edit.gif";
-// import Delete from "./Icons/Delete.gif";
 import { toast } from "react-toastify";
 import { useContext } from "react";
 import Mode from "../Context/Light_Dark_Mode";
@@ -16,12 +14,7 @@ function Passwords_Table({ setValue }) {
     setValue("Password", ele.Password);
     setValue("Website", ele.Website);
     Delete(ele, "option");
-    // let NewPasses = Passes.Passwords.filter((e) => {
-    //   return e.id !== ele.id;
-    // });
-    // console.log(NewPasses);
-    // await Passes.setPasswords(NewPasses);
-    // await localStorage.setItem("Passwords", JSON.stringify(NewPasses));
+    
   }
   async function Delete(element, option = null) {
     let NewPasses = Passes.Passwords.filter((e) => {
@@ -29,7 +22,7 @@ function Passwords_Table({ setValue }) {
     });
     console.log(NewPasses);
     await Passes.setPasswords(NewPasses);
-    await fetch("http://localhost:3000/Password", {
+    await fetch(import.meta.env.VITE_DELETE_PASSWORDS, {
       method: "DELETE",
       headers: {
         token: localStorage.getItem("Auth-Token"),
@@ -37,7 +30,6 @@ function Passwords_Table({ setValue }) {
       },
       body: JSON.stringify({ _id: element._id }),
     });
-    // await localStorage.setItem("Passwords", JSON.stringify(NewPasses));
     if (!option) {
       if (Mode.ToggleMode) {
         toast("Password Deleted Successfully", {
@@ -75,7 +67,6 @@ function Passwords_Table({ setValue }) {
           Saved Passwords
         </h1>
       )}
-      {/* {console.log(Passes.Passwords)} */}
       {Passes.Passwords.length === 0 ? (
         <>
           {mode.ToggleMode ? (
@@ -83,8 +74,6 @@ function Passwords_Table({ setValue }) {
               No Saved Passwords To Show
             </h3>
           ) : (
-            //bg-amber-400
-            // bg-green-400
             <h3 className="text-white text-3xl w-[70%]">
               No Saved Passwords To Show
             </h3>
@@ -157,8 +146,7 @@ function Passwords_Table({ setValue }) {
                     </td>
                     <td className="md:text-center md:p-3 md:table-cell hidden">
                       <div className="flex justify-center items-center">
-                        {/* <img src={Edit} alt="Edit_Icon" className="w-10 h-10" />
-  <img src={Delete} alt="Delete_Icon" className="w-10 h-10" /> */}
+                       
                         <lord-icon
                           src="https://cdn.lordicon.com/wuvorxbv.json"
                           trigger="hover"
