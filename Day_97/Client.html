@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 16</title>
+    <style>
+      .container {
+        height: 98vh;
+        background-color: rgba(58, 53, 53, 0.573);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .btn {
+        cursor: pointer;
+        padding: 20px;
+        border-radius: 2vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button onclick="DummyDataGenerator()" class="btn">
+        Generate Dummy Data
+      </button>
+    </div>
+
+    <script>
+      async function DummyDataGenerator() {
+        try {
+          await fetch("http://localhost:3000/SaveData");
+          alert("Dummy Data Is Generated And Saved To The Mongodb Database");
+        } catch (error) {
+          alert(error);
+        }
+      }
+    </script>
+  </body>
+</html>
