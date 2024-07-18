@@ -1,9 +1,13 @@
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Home = ({ setProgress }) => {
   const TypingEffect = useRef();
+  const Navigate = useNavigate();
   useEffect(() => {
+    if (localStorage.getItem("Todos")) {
+      Navigate("/Todos");
+    }
     for (let index = 10; index <= 100; index += 10) {
       setProgress(index);
     }

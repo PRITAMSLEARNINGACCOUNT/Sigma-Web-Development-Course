@@ -1,0 +1,16 @@
+{
+  "name": "day_96",
+  "version": "1.0.0",
+  "description": "Practice Of Day 96 Of The Sigma Web Development Course",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "type": "module",
+  "author": "pritamstech",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1"
+  }
+}

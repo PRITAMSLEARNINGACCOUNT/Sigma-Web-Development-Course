@@ -1,0 +1,17 @@
+{
+  "name": "exercise_16",
+  "version": "1.0.0",
+  "description": "This is exercise 16 of Sigma Web Development Course",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "author": "pritamstech",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1"
+  }
+}

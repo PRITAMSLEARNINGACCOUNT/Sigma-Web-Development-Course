@@ -1,0 +1,14 @@
+{
+  "name": "clear_the_clutter",
+  "version": "1.0.0",
+  "description": "This Is All About Exercise 15",
+  "main": "Exercise_15.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "PRITAMSTECH",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

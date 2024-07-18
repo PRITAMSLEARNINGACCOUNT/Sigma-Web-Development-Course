@@ -1,0 +1,14 @@
+{
+  "name": "exercise_17",
+  "version": "1.0.0",
+  "description": "This is exercise 17 of sigma web development course",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i Default.css -o Final.css --watch"
+  },
+  "author": "PRITAMSTECH",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.5"
+  }
+}

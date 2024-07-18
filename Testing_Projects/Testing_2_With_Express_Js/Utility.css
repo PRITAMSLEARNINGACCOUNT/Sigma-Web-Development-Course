@@ -1,0 +1,30 @@
+.border {
+    border: 2px solid red;
+}
+
+.border-radius {
+    border-radius: 15px;
+}
+
+.margin {
+    margin: 10px;
+}
+
+.background-color {
+    background-color: #121212;
+}
+
+.flexbox {
+    display: flex;
+}
+
+.justify-content {
+    justify-content: center;
+}
+
+.align-items {
+    align-items: center;
+}
+.padding{
+    padding: 10px;
+}

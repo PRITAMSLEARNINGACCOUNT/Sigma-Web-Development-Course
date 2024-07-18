@@ -1,6 +1,6 @@
-/Testing_Projects/Testing_2_With_Express_Js
 **/node_modules/
-**/package.json
-**/package-lock.json
 **/.env
+# /Testing_Projects/Testing_2_With_Express_Js
+# **/package.json
+# **/package-lock.json
 # Day_130(Project - 3)/Secure_Vault(Mongodb Version)/Backend/.env
