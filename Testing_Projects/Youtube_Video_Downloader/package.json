@@ -1,0 +1,30 @@
+{
+  "name": "youtube_video_downloader",
+  "version": "1.0.0",
+  "description": "Testing Project For Youtube Video Downloader",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Youtube",
+    "Downloader",
+    "Youtube",
+    "Downloader",
+    "Youtube",
+    "Video",
+    "Downloader",
+    "youtube",
+    "Video",
+    "downloader",
+    "youtube",
+    "video",
+    "downloader"
+  ],
+  "author": "The King Of Technology",
+  "license": "ISC",
+  "dependencies": {
+    "ytdl-core": "^4.11.5"
+  }
+}
